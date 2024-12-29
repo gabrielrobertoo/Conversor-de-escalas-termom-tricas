@@ -1,0 +1,15 @@
+package main
+
+//Convertor da ebulição da água de Kelvin para graus Celsius
+// Fórmula: C = K-273
+
+var K = 1000
+var C = (K - 273)
+var F = (K - 459)
+
+func main() {
+
+	println("O ponto de ebulição em º C é:", C)
+	println("O ponto de ebulição em º K é:", K)
+	println("O ponto de ebulição em ºF é:", F)
+}
