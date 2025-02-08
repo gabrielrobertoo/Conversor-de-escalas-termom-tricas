@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+// Dados para calculo
+var C float32 = 2800
+var I float32 = 3
+var IM float32 = 0
+var IA float32 = I / 100
+var TM float32 = 0
+var TA float32 = 7
+
+//MENSAL
+
+var RMM float32 = float32(math.Pow(float64(1+IM), float64(TM))) * (C)
+var JMM float32 = float32(math.Pow(float64(IM), float64(TM)))*(C) - (C)
+
+// ANUAL
+var RAA float32 = float32(math.Pow(float64(1+IA), float64(TA))) * (C)
+var JAA float32 = float32(math.Pow(float64(1+IA), float64(TA)))*(C) - (C)
+
+func main() {
+	if IM+TM > 0 {
+		fmt.Println("Juros final é:", JMM)
+		fmt.Println("Montante final é:", RMM)
+	} else {
+		fmt.Println("Juros final é:", JAA)
+		fmt.Println("Montante final é:", RAA)
+
+	}
+
+}
